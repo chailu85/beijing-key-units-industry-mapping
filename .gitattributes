@@ -1,0 +1,10 @@
+* text=auto
+
+# 数据文件按二进制对待，避免换行/编码被 git 改写（CSV 含中文与 BOM）
+*.csv  -text
+*.xlsx binary
+*.xls  binary
+*.docx binary
+*.pptx binary
+*.png  binary
+*.jpg  binary

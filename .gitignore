@@ -1,0 +1,24 @@
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.tools/
+
+# ---- 天眼查凭证（严禁入库） ----
+.tyc/
+tyc-config.json
+*.token
+
+# ---- 临时产物 ----
+*.tmp
+*.log
+~$*
+.cache/
