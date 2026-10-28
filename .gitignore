@@ -18,10 +18,15 @@ tyc-config.json
 *.token
 
 # ---- 临时产物 ----
+tmp/
 *.tmp
 *.log
 ~$*
 .cache/
+
+# ---- 标准原文（受版权保护的大文件，按 docs 内 [S1]—[S3] 链接自行获取）----
+ref/*.pdf
+ref/*.xlsx
 
 # ---- WorkBuddy 会话数据 ----
 .workbuddy/

@@ -1,11 +1,13 @@
 # Beijing Key Units Industry Mapping
 
-> **GitHub repository:** `beijing-key-units-industry-mapping`  
-> **中文名：** 421 重点行业分类统计（“421”指国务院令第421号）
+> **421 重点行业分类统计**（“421”指国务院令第421号《企业事业单位内部治安保卫条例》）
+> **Repository:** <https://github.com/chailu85/beijing-key-units-industry-mapping>
 
 Conditional mapping of Beijing's 13 categories of key units under DB11/T 2552—2026 to China's national industry classification GB/T 4754—2017, supporting candidate screening, industry coding and statistical grouping.
 
 本仓库把**治安保卫法规标准**里的重点单位类别，与**国民经济行业分类**做条件性对照，用于候选单位检索、行业归类和统计分组。
+
+**版本（Releases）：** [v1](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v1) ｜ [v2](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v2) ｜ [v3](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v3) ｜ [v3.1（现行版）](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v3.1)
 
 两条法律依据侧：**《企业事业单位内部治安保卫条例》（国务院令第421号）** 与北京市地标 **DB11/T 2552—2026《单位内部安全防范通用要求》第6.1条**（13 类重点单位，编号 a—m；n 项为兜底条款，不单列为第14类）。分类侧：《国民经济行业分类》**GB/T 4754—2017**（按第1号修改单修订）。数据侧：天眼查 `tyc` CLI 拉取的企业明细。
 
@@ -82,6 +84,21 @@ Conditional mapping of Beijing's 13 categories of key units under DB11/T 2552—
 
 正文结构：一 依据与使用规则／二 13类总览／三 逐类代码对照（含“附：易混淆活动”）／四 n项兜底与覆盖范围／五 编码决策流程与字段要求（单位主表＋类别明细表）／六 待确认事项／七 修订记录（v1→v2、v2→v3、v3→v3.1 逐条）／八 参考依据。修订记录可逐条回溯到意见原文及内部一致性复核事项。
 
+## 版本发布（Releases）
+
+每个版本在 GitHub 上对应一个 Release，页面内附该版 `.md` 附件（v2、v3 另附对应轮次的审查意见），也可以直接点下表“文档”一列阅读。
+
+| 版本 | 发布日 | Release | 文档 | 状态 |
+|---|---|---|---|---|
+| **v3.1** | 2026-10-28 | [v3.1](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v3.1) | [第三版修正稿](docs/重点单位13类_GBT4754-2017条件性对照_v3.1_20261028.md) | **现行版** |
+| v3 | 2026-10-28 | [v3](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v3) | [第三版](docs/archive/重点单位13类_GBT4754-2017条件性对照_v3_20261028.md) | 已归档 |
+| v2 | 2026-10-28 | [v2](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v2) | [第二版](docs/archive/重点单位13类_GBT4754-2017条件性对照_v2_20261028.md) | 已归档 |
+| v1 | 2026-07-18 | [v1](https://github.com/chailu85/beijing-key-units-industry-mapping/releases/tag/v1) | [初版](docs/archive/重点单位13类_GBT4754-2017条件性对照_v1_20260718.md) | 已归档 |
+
+- **v1** 首版；**v2** 落实第 1 轮审计意见（A01—A07）；**v3** 落实第 2 轮复审意见（B01—B06、C01—C04、D01—D03）；**v3.1** 为 v3 的内部一致性修正稿，不改变 v3 的结论框架。
+- 只下载文档、不需要历史上下文时，直接用上表“文档”链接；需要完整说明时进 Release 页面。
+- Release 的 tag 与提交对应同一快照，仓库内文件路径见上表及“版本与名称关系”。
+
 ## 数据口径
 
 | 数据 | 来源 | 用途 |
@@ -132,5 +149,3 @@ python tools/check_codes.py "docs/archive/重点单位13类_GBT4754-2017条件�
 - [ ] 确定"重要""大型"的适用口径与依据——这是把候选清单变成可计数结果的前置条件，缺它只能出候选数，不能出重点单位数。
 - [ ] n 项交通枢纽的覆盖范围：候选代码 5631、5331／5332、5441／5442、5531／5532 是否纳入，需与条例第十三条口径对齐。
 - [ ] d 项"能源产业链"一组（B06／B07 煤炭油气开采、C25 炼油、G57 管道、5162／5265 成品油销售）是否按同一标准进一步收口——按"剔除无纳入理由行业"的尺度，B06 煤炭开采亦难成立。
-#   b e i j i n g - k e y - u n i t s - i n d u s t r y - m a p p i n g  
- 
