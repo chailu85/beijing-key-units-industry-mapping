@@ -22,3 +22,6 @@ tyc-config.json
 *.log
 ~$*
 .cache/
+
+# ---- WorkBuddy 会话数据 ----
+.workbuddy/
